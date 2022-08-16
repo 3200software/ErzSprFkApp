@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_wall">
+
+    <fragment
+        android:id="@+id/navigation_wall"
+        android:name="com.software3200.erzsprfkapp.ui.WallFragment"
+        android:label="Duvar"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_team"
+        android:name="com.software3200.erzsprfkapp.ui.TeamFragment"
+        android:label="Takım"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_store"
+        android:name="com.software3200.erzsprfkapp.ui.StoreFragment"
+        android:label="Store"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_supported"
+        android:name="com.software3200.erzsprfkapp.ui.StoreFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_spported" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.software3200.erzsprfkapp.ui.StoreFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
