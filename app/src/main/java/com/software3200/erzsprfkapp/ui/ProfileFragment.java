@@ -11,12 +11,15 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.software3200.erzsprfkapp.databinding.FragmentProfileBinding;
 import com.software3200.erzsprfkapp.databinding.FragmentSpportedBinding;
 
 public class ProfileFragment extends Fragment {
 
     private FragmentProfileBinding binding;
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "472805704783",
+    "project_id": "erzsprfkapp",
+    "storage_bucket": "erzsprfkapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472805704783:android:63c00cc054c8094b92d63a",
+        "android_client_info": {
+          "package_name": "com.software3200.erzsprfkapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472805704783-hu7nnopnpu4fduohdsjtmg78qn6phpl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIa5QBajt0JSE2og1jfMl0n4KMM4Rw2Ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472805704783-hu7nnopnpu4fduohdsjtmg78qn6phpl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
