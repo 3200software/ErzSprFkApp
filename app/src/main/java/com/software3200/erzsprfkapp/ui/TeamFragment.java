@@ -12,9 +12,13 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.software3200.erzsprfkapp.databinding.FragmentDashboardBinding;
 
+import java.util.ArrayList;
+
 public class TeamFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -22,6 +26,9 @@ public class TeamFragment extends Fragment {
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+
+
 
 
         return root;

@@ -10,39 +10,58 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ></ImageView>
 
+        <ImageView
+            android:id="@+id/feedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/asda"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="160dp">
+
+            <ImageButton
+                android:id="@+id/feedLikeButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="160dp"></ImageButton>
+
+            <TextView
+                android:id="@+id/feedLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1968"
+                android:textSize="25dp"></TextView>
+
+        </LinearLayout>
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/feedShareButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="16dp"
+            android:background="@null"
             android:src="@drawable/ic_baseline_share_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.919"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2"></ImageButton>
+            tools:layout_editor_absoluteX="345dp"
+            tools:layout_editor_absoluteY="160dp"></ImageButton>
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_baseline_favorite_border_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.919"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageButton>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
     <TextView
+        android:id="@+id/feedTileTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title"
@@ -51,11 +70,26 @@
         android:layout_marginLeft="25dp"></TextView>
 
     <TextView
+        android:id="@+id/feedDescriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description"
         android:textSize="15dp"
         android:layout_marginLeft="25dp"></TextView>
+
+    <TextView
+        android:id="@+id/feedTypePrivateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        ></TextView>
+
+
+    <TextView
+        android:id="@+id/feedDocumentId"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        ></TextView>
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
