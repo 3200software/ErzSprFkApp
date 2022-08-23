@@ -36,6 +36,12 @@ public class AdapterMainFeed extends RecyclerView.Adapter<AdapterMainFeed.MainFe
 
         Picasso.get().load(modelMainFeedArrayList.get(position).feedImageUrl).into(holder.mainFeedRecyclerRowBinding.feedImageView);
 
+        String likeCount = (String.valueOf(modelMainFeedArrayList.get(position).feedLikeCount));
+
+        holder.mainFeedRecyclerRowBinding.feedLikeCount.setText(likeCount);
+
+
+
 
 
 
