@@ -28,8 +28,8 @@
 
             <ImageButton
                 android:id="@+id/feedLikeButton"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:background="@null"
                 android:src="@drawable/ic_baseline_favorite_border_24"
                 tools:layout_editor_absoluteX="16dp"
@@ -41,14 +41,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="1968"
-                android:textSize="25dp"></TextView>
+                android:textSize="12dp"></TextView>
 
         </LinearLayout>
 
         <ImageButton
             android:id="@+id/feedShareButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:background="@null"
             android:src="@drawable/ic_baseline_share_24"
             tools:layout_editor_absoluteX="345dp"
@@ -64,7 +64,7 @@
         android:id="@+id/feedTileTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
+        android:text="FGHFHGFHGF"
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_marginLeft="25dp"></TextView>

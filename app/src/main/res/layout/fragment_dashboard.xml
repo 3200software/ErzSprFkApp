@@ -7,14 +7,12 @@
     android:orientation="vertical"
     tools:context=".ui.TeamFragment">
 
-    <TextView
-        android:layout_width="match_parent"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teamTitleRecyclerView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fikstür"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"></TextView>
+        android:layout_gravity="center"></androidx.recyclerview.widget.RecyclerView>
 
 
 
@@ -24,45 +22,21 @@
         android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Puan Durumu"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"></TextView>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/teamFixtureRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kadro"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:background="background-image: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, rgba(134,231,214,1) 90% );"></TextView>
-
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/teamFixtureRecyclerView"
+        android:id="@+id/teamStandingsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teamStaffRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Teknik Ekip"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"></TextView>
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teamtechnicalTeamRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
