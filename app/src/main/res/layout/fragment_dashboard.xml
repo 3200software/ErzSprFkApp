@@ -8,11 +8,44 @@
     tools:context=".ui.TeamFragment">
 
 
-    <androidx.recyclerview.widget.RecyclerView
+    q<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/teamTitleRecyclerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fikstür"
+            android:layout_weight="1"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puan Durumu"
+            android:layout_weight="1"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kadro"
+            android:layout_weight="1"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teknik Ekip"
+            android:layout_weight="1"></Button>
+
+
+
+
+    </LinearLayout>
 
 
 
