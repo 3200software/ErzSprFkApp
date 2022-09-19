@@ -6,17 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".ui.StoreFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/storeShowCaseImageView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                    <Button
+                android:id="@+id/storeManCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Erkek"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/storeWomanCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kadın"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/storeChildrenCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Çocuk"
+                android:layout_weight="1"></Button>
+
+            <Button
+                android:id="@+id/storeHomeOfficeCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ev 6 Ofis"
+                android:layout_weight="1"></Button>
+
+                    <Button
+                        android:id="@+id/storeAccesoryCategoryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aksesuar"
+                        android:layout_weight="1"></Button>
+
+
+                    <Button
+                        android:id="@+id/storeFlagCategoryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bayrak"
+                        android:layout_weight="1"></Button>
+
+
+
+                    <Button
+                        android:id="@+id/storeWinterProductCategoryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kışlık Ürünler"
+                        android:layout_weight="1"></Button>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/storeProductRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

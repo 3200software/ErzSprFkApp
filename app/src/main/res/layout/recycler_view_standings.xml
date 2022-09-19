@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"></ImageView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:layout_gravity="center"
+        android:text="Keçiörengücü"
+        android:textSize="18dp"
+        android:layout_weight="1"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OO"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GG"
+        android:background="@color/gray"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BB"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:text="MM"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AA"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:text="YY"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AV"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="PP"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        ></TextView>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
