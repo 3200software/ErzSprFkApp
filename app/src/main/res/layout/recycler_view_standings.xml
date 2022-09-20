@@ -6,93 +6,116 @@
     android:layout_marginRight="5dp">
 
     <ImageView
+        android:id="@+id/teamStandingStatusImageView"
+        android:layout_width="15dp"
+        android:layout_height="25dp"></ImageView>
+
+    <ImageView
+        android:id="@+id/teamStandingLogoImageView"
         android:layout_width="25dp"
         android:layout_height="25dp"></ImageView>
 
-
     <TextView
+        android:id="@+id/teamStandingTeamName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:background="@color/gray"
         android:layout_gravity="center"
-        android:text="Keçiörengücü"
-        android:textSize="18dp"
+        android:text="Erzurumspor FK"
+        android:gravity="center_vertical"
+        android:paddingLeft="3dp"
+        android:textSize="15dp"
         android:layout_weight="1"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OO"
+        android:id="@+id/teamStandingGamePlayedTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:text="O"
         android:gravity="center"
         android:layout_gravity="center"
-        android:textSize="18dp"
-        android:layout_marginRight="5dp"></TextView>
+        android:textSize="15dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GG"
+        android:id="@+id/teamStandingVictoryTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:text="G"
         android:background="@color/gray"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="18dp"
-        android:layout_marginRight="5dp"></TextView>
+        android:textSize="15dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BB"
+        android:id="@+id/teamStandingTieTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:text="B"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="18dp"
-        android:layout_marginRight="5dp"></TextView>
+        android:textSize="15dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/teamStandingDefeatTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
         android:background="@color/gray"
-        android:text="MM"
+        android:text="M"
         android:gravity="center"
         android:layout_gravity="center"
-        android:textSize="18dp"
-        android:layout_marginRight="5dp"></TextView>
+        android:textSize="15dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AA"
+        android:id="@+id/teamStandingGoalScoredTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:text="A"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="18dp"
-        android:layout_marginRight="5dp"></TextView>
+        android:textSize="15dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/teamStandingGoalConcededTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
         android:background="@color/gray"
-        android:text="YY"
+        android:text="Y"
         android:gravity="center"
         android:layout_gravity="center"
-        android:textSize="18dp"
-        android:layout_marginRight="5dp"></TextView>
+        android:textSize="15dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/teamStandingAverageTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
         android:text="AV"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="18dp"
-        android:layout_marginRight="5dp"></TextView>
+        android:textSize="15dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"></TextView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/teamStandingPointTextView"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
         android:background="@color/gray"
         android:gravity="center"
-        android:text="PP"
+        android:text="P"
         android:layout_gravity="center"
-        android:textSize="18dp"
+        android:textSize="15dp"
         ></TextView>
 
 

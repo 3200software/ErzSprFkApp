@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,9 +21,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.software3200.erzsprfkapp.Adapter.AdapterFikstur;
+import com.software3200.erzsprfkapp.Adapter.AdapterStandings;
 import com.software3200.erzsprfkapp.Adapter.AdapterTeamTitle;
 import com.software3200.erzsprfkapp.Model.ModelFikstur;
 import com.software3200.erzsprfkapp.Model.ModelMainStories;
+import com.software3200.erzsprfkapp.Model.ModelStandings;
 import com.software3200.erzsprfkapp.Model.ModelTeamTitle;
 import com.software3200.erzsprfkapp.databinding.FragmentDashboardBinding;
 
@@ -36,11 +39,11 @@ public class TeamFragment extends Fragment {
 
     FirebaseFirestore firebaseFirestore;
 
-    ArrayList<ModelTeamTitle> modelTeamTitleArrayList;
-    AdapterTeamTitle adapterTeamTitle;
-
     ArrayList<ModelFikstur> modelFiksturArrayList;
     AdapterFikstur adapterFikstur;
+
+    ArrayList<ModelStandings> modelStandingsArrayList;
+    AdapterStandings adapterStandings;
 
 
 
@@ -53,13 +56,24 @@ public class TeamFragment extends Fragment {
 
         firebaseFirestore = FirebaseFirestore.getInstance();
 
-
         modelFiksturArrayList = new ArrayList<>();
+        getFiksturVoid();
         LinearLayoutManager linearLayoutManagerFixtur = new LinearLayoutManager(requireActivity());
         linearLayoutManagerFixtur.setOrientation(RecyclerView.HORIZONTAL);
-        binding.teamTitleRecyclerView.setLayoutManager(linearLayoutManagerFixtur);
+        binding.teamFixtureRecyclerView.setLayoutManager(linearLayoutManagerFixtur);
         adapterFikstur = new AdapterFikstur(modelFiksturArrayList);
-        binding.teamTitleRecyclerView.setAdapter(adapterFikstur);
+        binding.teamFixtureRecyclerView.setAdapter(adapterFikstur);
+
+        modelStandingsArrayList = new ArrayList<>();
+        getStandingsVoid();
+        LinearLayoutManager linearLayoutManagerStandings = new LinearLayoutManager(requireActivity());
+        binding.teamStandingsRecyclerView.setLayoutManager(linearLayoutManagerStandings);
+        adapterStandings = new AdapterStandings(modelStandingsArrayList);
+        binding.teamStandingsRecyclerView.setAdapter(adapterStandings);
+
+
+
+
 
         return root;
     }
@@ -71,7 +85,7 @@ public class TeamFragment extends Fragment {
     }
 
 
-    public void getFikstur () {
+    public void getFiksturVoid () {
 
         firebaseFirestore.collection("Fikstur").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -80,12 +94,9 @@ public class TeamFragment extends Fragment {
                 if (error != null) {
 
 
-
                 }
 
-
                 if (value != null) {
-
 
                     for (DocumentSnapshot snapshot : value.getDocuments()) {
 
@@ -108,13 +119,66 @@ public class TeamFragment extends Fragment {
 
                 }
 
-
-
-
             }
+
         });
 
 
+
+
+    }
+
+
+    public void getStandingsVoid() {
+
+        firebaseFirestore.collection("Standings").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                if (error != null) {
+
+
+
+                }
+
+                if (value != null) {
+
+                    for (DocumentSnapshot snapshot : value.getDocuments()) {
+
+
+                        Map<String, Object> data = snapshot.getData();
+
+                        String teamLogoImageUrl = (String) data.get("teamLogoImageUrl");
+                        String teamStandingsTeamName = (String) data.get("teamStandingsTeamName");
+                        Long teamStandingsPlayedLong = (Long) data.get("teamStandingsPlayed");
+                        Long teamStandingsVictoryLong = (Long) data.get("teamStandingsVictory");
+                        Long teamStandingsTieLong = (Long) data.get("teamStandingsTie");
+                        Long teamStandingsDefeatLong = (Long) data.get("teamStandingsDefeat");
+                        Long teamStandingsGoalScoredLong = (Long) data.get("teamStandingsGoalScored");
+                        Long teamStandingsGoalConcededLong = (Long) data.get("teamStandingsGoalConceded");
+                        Long teamStandingsAverageLong = (Long) data.get("teamStandingsAverage");
+                        Long getTeamStandingsPointLong = (Long) data.get("getTeamStandingsPoint");
+
+                        Integer teamStandingsPlayed = teamStandingsPlayedLong.intValue();
+                        Integer teamStandingsVictory = teamStandingsVictoryLong.intValue();
+                        Integer teamStandingsTie = teamStandingsTieLong.intValue();
+                        Integer teamStandingsDefeat = teamStandingsDefeatLong.intValue();
+                        Integer teamStandingsGoalScored = teamStandingsGoalScoredLong.intValue();
+                        Integer teamStandingsGoalConceded = teamStandingsGoalConcededLong.intValue();
+                        Integer teamStandingsAverage = teamStandingsAverageLong.intValue();
+                        Integer getTeamStandingsPoint = getTeamStandingsPointLong.intValue();
+
+                        ModelStandings modelStandings = new ModelStandings(teamLogoImageUrl, teamStandingsTeamName,teamStandingsPlayed,teamStandingsVictory,teamStandingsTie,teamStandingsDefeat,teamStandingsGoalScored,teamStandingsGoalConceded,teamStandingsAverage,getTeamStandingsPoint);
+                        modelStandingsArrayList.add(modelStandings);
+
+                    }
+
+                    adapterStandings.notifyDataSetChanged();
+
+                }
+
+            }
+        });
 
 
     }

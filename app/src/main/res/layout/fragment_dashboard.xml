@@ -8,37 +8,31 @@
     tools:context=".ui.TeamFragment">
 
 
-    q<androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/teamTitleRecyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"></androidx.recyclerview.widget.RecyclerView>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:text="Fikstür"
             android:layout_weight="1"></Button>
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:text="Puan Durumu"
             android:layout_weight="1"></Button>
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:text="Kadro"
             android:layout_weight="1"></Button>
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:text="Teknik Ekip"
             android:layout_weight="1"></Button>
 
@@ -58,90 +52,107 @@
 
 
 
-
         <TextView
+            android:id="@+id/teamStandingTeamName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:background="@color/gray"
             android:layout_gravity="center"
             android:text="Takım"
-            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="3dp"
+            android:textSize="15dp"
             android:layout_weight="1"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OO"
+            android:id="@+id/teamStandingGamePlayedTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:text="O"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp"></TextView>
+            android:textSize="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GG"
+            android:id="@+id/teamStandingVictoryTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:text="G"
             android:background="@color/gray"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp"></TextView>
+            android:textSize="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BB"
+            android:id="@+id/teamStandingTieTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:text="B"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp"></TextView>
+            android:textSize="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/teamStandingDefeatTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
             android:background="@color/gray"
-            android:text="MM"
+            android:text="M"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp"></TextView>
+            android:textSize="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AA"
+            android:id="@+id/teamStandingGoalScoredTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:text="A"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp"></TextView>
+            android:textSize="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/teamStandingGoalConcededTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
             android:background="@color/gray"
-            android:text="YY"
+            android:text="Y"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp"></TextView>
+            android:textSize="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/teamStandingAverageTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
             android:text="AV"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp"></TextView>
+            android:textSize="15dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"></TextView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/teamStandingPointTextView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
             android:background="@color/gray"
             android:gravity="center"
-            android:text="PP"
+            android:text="P"
             android:layout_gravity="center"
-            android:textSize="18dp"
+            android:textSize="15dp"
             ></TextView>
 
 
@@ -171,7 +182,6 @@
             android:textSize="15dp"
             android:layout_gravity="">
 
-
         </TextView>
 
     </LinearLayout>
@@ -190,7 +200,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/teamStaffRecyclerView"
+        android:id="@+id/teamPlayersRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
