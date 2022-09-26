@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PlayerDetailActivity">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="15dp"
+          android:orientation="vertical">
+
+             <ImageView
+             android:id="@+id/playerPhotoImageView"
+             android:layout_width="match_parent"
+              android:layout_height="150dp"></ImageView>
+
+
+            <TextView
+             android:id="@+id/playerNameTextView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Player Name"
+              android:textSize="20dp"
+              android:layout_gravity="center"
+               android:layout_marginTop="10dp"></TextView>
+
+               <TextView
+                android:id="@+id/playerAgeTextView"
+                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="Age"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+               android:layout_marginTop="5dp"></TextView>
+
+      </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="15dp"
+       android:layout_marginRight="15dp"
+       android:layout_marginLeft="15dp"
+       android:backgroundTint="@color/gray"
+       app:cardCornerRadius="15dp">
+
+     <LinearLayout
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Genel"
+           android:textStyle="bold"
+           android:textSize="25dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"></TextView>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Maç"
+           android:textSize="25dp"
+           android:layout_marginLeft="15dp"
+           android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/matchPieceTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="İlk 11"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/firstElevenTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Gol"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/goalTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Asist"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/assistTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Oynadığı Süre"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/matchTimeTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Sarı Kart"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/yellowCardTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Kırmızı Kart"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/redCardTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+
+     </LinearLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:backgroundTint="@color/gray"
+       app:cardCornerRadius="15dp"
+       android:layout_marginTop="15dp"
+       android:layout_marginRight="15dp"
+       android:layout_marginLeft="15dp">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Hücum"
+           android:textStyle="bold"
+           android:textSize="25dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"></TextView>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Sağ Ayakla Atılan Gol"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/rightFootGoalTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Sol Ayakla Atılan Gol"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/leftFootGoalTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Kafa Golü"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/headGoalTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Ceza Sahası Dışından Atılan Gol"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/goalScoredOutsideThePanltyAreaTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Maç Başına Gol"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/goalsPerMatch"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Direkten Dönen Top"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/ballSpinningBall"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Toplan Şut"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/totalShotTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Asist"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/assistAttackTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Kafa Golü"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/headGoalTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Şut İsabeti"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/shotHitTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Penaltıyı Gole Çevirme"
+               android:textSize="25dp"
+               android:textStyle="bold"
+               android:layout_marginLeft="15dp"
+               android:layout_weight="1"></TextView>
+
+           <TextView
+               android:id="@+id/penaltyGoalConversionTextView"
+               android:layout_width="50dp"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="000"
+               android:textSize="25dp"
+               android:textStyle="bold"
+               android:layout_marginRight="10dp"
+               ></TextView>
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Maç Başına Ofsayt"
+               android:textSize="25dp"
+               android:textStyle="bold"
+               android:layout_marginLeft="15dp"
+               android:layout_weight="1"></TextView>
+
+           <TextView
+               android:id="@+id/offsidePerMatchTextView"
+               android:layout_width="50dp"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="000"
+               android:textSize="25dp"
+               android:textStyle="bold"
+               android:layout_marginRight="10dp"
+               ></TextView>
+
+         </LinearLayout>
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Rakip Ceza Sahasında Topla Buluşma"
+               android:textSize="25dp"
+               android:textStyle="bold"
+               android:layout_marginLeft="15dp"
+               android:layout_weight="1"></TextView>
+
+           <TextView
+               android:id="@+id/meetingtheBallOppenentCourtTextView"
+               android:layout_width="50dp"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="000"
+               android:textSize="25dp"
+               android:textStyle="bold"
+               android:layout_marginRight="10dp"
+               ></TextView>
+
+         </LinearLayout>
+
+       </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+   </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+
+  </androidx.appcompat.widget.LinearLayoutCompat>
