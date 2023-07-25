@@ -82,7 +82,7 @@
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="Genel"
+           android:text="İstatistik"
            android:textStyle="bold"
            android:textSize="25dp"
            android:layout_marginTop="10dp"
@@ -142,6 +142,7 @@
        </LinearLayout>
 
        <LinearLayout
+           android:id="@+id/goalLinearLayout"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_marginTop="5dp">
@@ -169,6 +170,7 @@
        </LinearLayout>
 
        <LinearLayout
+           android:id="@+id/assistLinearLayout"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_marginTop="5dp">
@@ -194,6 +196,36 @@
              ></TextView>
 
        </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/rescueLinearLayout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Kurtarış"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"></TextView>
+
+         <TextView
+             android:id="@+id/rescueTextView"
+             android:layout_width="50dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="000"
+             android:textSize="25dp"
+             android:textStyle="bold"
+             android:layout_marginRight="10dp"
+             ></TextView>
+
+       </LinearLayout>
+
+
 
        <LinearLayout
            android:layout_width="match_parent"
@@ -285,393 +317,6 @@
 
 
 
-   <androidx.cardview.widget.CardView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:backgroundTint="@color/gray"
-       app:cardCornerRadius="15dp"
-       android:layout_marginTop="15dp"
-       android:layout_marginRight="15dp"
-       android:layout_marginLeft="15dp">
-
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-       android:orientation="vertical">
-
-
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Hücum"
-           android:textStyle="bold"
-           android:textSize="25dp"
-           android:layout_marginTop="10dp"
-           android:layout_marginLeft="10dp"></TextView>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Sağ Ayakla Atılan Gol"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/rightFootGoalTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Sol Ayakla Atılan Gol"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/leftFootGoalTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Kafa Golü"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/headGoalTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Ceza Sahası Dışından Atılan Gol"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/goalScoredOutsideThePanltyAreaTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Maç Başına Gol"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/goalsPerMatch"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Direkten Dönen Top"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/ballSpinningBall"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Toplan Şut"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/totalShotTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Asist"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/assistAttackTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Kafa Golü"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/headGoalTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-       </LinearLayout>
-
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="15dp">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Şut İsabeti"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginLeft="15dp"
-             android:layout_weight="1"></TextView>
-
-         <TextView
-             android:id="@+id/shotHitTextView"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:gravity="center"
-             android:text="000"
-             android:textSize="25dp"
-             android:textStyle="bold"
-             android:layout_marginRight="10dp"
-             ></TextView>
-
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="15dp">
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Penaltıyı Gole Çevirme"
-               android:textSize="25dp"
-               android:textStyle="bold"
-               android:layout_marginLeft="15dp"
-               android:layout_weight="1"></TextView>
-
-           <TextView
-               android:id="@+id/penaltyGoalConversionTextView"
-               android:layout_width="50dp"
-               android:layout_height="wrap_content"
-               android:gravity="center"
-               android:text="000"
-               android:textSize="25dp"
-               android:textStyle="bold"
-               android:layout_marginRight="10dp"
-               ></TextView>
-
-         </LinearLayout>
-
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="15dp">
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Maç Başına Ofsayt"
-               android:textSize="25dp"
-               android:textStyle="bold"
-               android:layout_marginLeft="15dp"
-               android:layout_weight="1"></TextView>
-
-           <TextView
-               android:id="@+id/offsidePerMatchTextView"
-               android:layout_width="50dp"
-               android:layout_height="wrap_content"
-               android:gravity="center"
-               android:text="000"
-               android:textSize="25dp"
-               android:textStyle="bold"
-               android:layout_marginRight="10dp"
-               ></TextView>
-
-         </LinearLayout>
-
-
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="15dp">
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Rakip Ceza Sahasında Topla Buluşma"
-               android:textSize="25dp"
-               android:textStyle="bold"
-               android:layout_marginLeft="15dp"
-               android:layout_weight="1"></TextView>
-
-           <TextView
-               android:id="@+id/meetingtheBallOppenentCourtTextView"
-               android:layout_width="50dp"
-               android:layout_height="wrap_content"
-               android:gravity="center"
-               android:text="000"
-               android:textSize="25dp"
-               android:textStyle="bold"
-               android:layout_marginRight="10dp"
-               ></TextView>
-
-         </LinearLayout>
-
-       </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-   </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

@@ -24,9 +24,11 @@ import com.software3200.erzsprfkapp.Adapter.AdapterMainFeed;
 import com.software3200.erzsprfkapp.Adapter.AdapterMainStories;
 import com.software3200.erzsprfkapp.Model.ModelMainFeed;
 import com.software3200.erzsprfkapp.Model.ModelMainStories;
+import com.software3200.erzsprfkapp.Model.ModelPlayers;
 import com.software3200.erzsprfkapp.databinding.FragmentHomeBinding;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 
 public class WallFragment extends Fragment {
@@ -40,6 +42,8 @@ public class WallFragment extends Fragment {
 
     ArrayList<ModelMainFeed> modelMainFeedArrayList;
     AdapterMainFeed adapterMainFeed;
+
+    ArrayList<ModelPlayers> modelPlayersArrayList;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -67,6 +71,10 @@ public class WallFragment extends Fragment {
         binding.feedRecyclerView.setLayoutManager(linearLayoutManagerMainFeed);
         adapterMainFeed = new AdapterMainFeed(modelMainFeedArrayList);
         binding.feedRecyclerView.setAdapter(adapterMainFeed);
+
+        modelPlayersArrayList = new ArrayList<>();
+        getPlayerDetail();
+
 
 
 
@@ -168,6 +176,60 @@ public class WallFragment extends Fragment {
 
                 }
 
+
+            }
+        });
+
+
+    }
+
+
+    public void getPlayerDetail() {
+
+        firebaseFirestore.collection("Players").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                if (error != null) {
+
+                    Toast.makeText(requireActivity(),"İnternet bağlantınızda bir problwm var. Lütfen saha sonra tekrar deneyiniz",Toast.LENGTH_SHORT).show();
+                }
+
+                if(value != null) {
+
+                    for (DocumentSnapshot snapshot:value.getDocuments()) {
+
+                        Map<String,Object> playersData = snapshot.getData();
+                        String playerProfilPhotoUrl = (String) playersData.get("ppUrl");
+                        String playerName = (String) playersData.get("playerName");
+                        String playerSurname = (String) playersData.get("playerSurname");
+                        Date playerBirthday = (Date) playersData.get("playerBirthday");
+                        Long playerMatchLong = (Long) playersData.get("playerMatch");
+                        Long playerFirstElevenLong = (Long) playersData.get("playerFirstEleven");
+                        Long playerGoalLong = (Long) playersData.get("playerGoal");
+                        Long playerAssistLong = (Long) playersData.get("playerAssist");
+                        Long playerRescueLong = (Long) playersData.get("playerRescue");
+                        Long playerMatchTimeLong = (Long) playersData.get("playerMatchTime");
+                        Long playerYellowCardLong = (Long) playersData.get("playerYellowCard");
+                        Long playerRedCardLong = (Long) playersData.get("playerRedCard");
+
+                        Integer playerMatch = playerMatchLong.intValue();
+                        Integer playerFirstEleven = playerFirstElevenLong.intValue();
+                        Integer playerGoal = playerGoalLong.intValue();
+                        Integer playerAssist = playerAssistLong.intValue();
+                        Integer playerRescue = playerRescueLong.intValue();
+                        Integer playerMatchTime = playerMatchTimeLong.intValue();
+                        Integer playerYellowCard = playerYellowCardLong.intValue();
+                        Integer playerRedCard = playerRedCardLong.intValue();
+
+                        ModelPlayers modelPlayers = new ModelPlayers(playerProfilPhotoUrl,playerName,playerSurname,playerBirthday,playerMatch,playerFirstEleven,playerGoal,playerAssist,playerRescue,playerMatchTime,playerYellowCard,playerRedCard);
+                        modelPlayersArrayList.add(modelPlayers);
+
+                    }
+
+
+
+                }
 
             }
         });
